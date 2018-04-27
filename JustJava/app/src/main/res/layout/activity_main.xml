@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:text="@string/hello_android"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/subTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleTextView"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="3dp"
+                    android:text="@string/welcome_to_android" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/inputNameTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/enter_your_name" />
+
+                    <EditText
+                        android:id="@+id/inputnameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/inputNameTextView"
+                        android:layout_toRightOf="@id/inputNameTextView"
+                        android:inputType="textPersonName" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/inputOptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/tick_your_choice" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_whippedCream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_toEndOf="@id/inputOptionTextView"
+                        android:layout_toRightOf="@id/inputOptionTextView"
+                        android:text="@string/whipped_cream" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox_chocolate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@id/checkBox_whippedCream"
+                        android:layout_toRightOf="@id/checkBox_whippedCream"
+                        android:text="@string/chocolate" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/inputQuantityTextView"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="30dp"
+
+                        android:text="@string/quantity"
+                        android:paddingEnd="30dp" />
+
+                    <Button
+                        android:id="@+id/increment_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_toEndOf="@id/inputQuantityTextView"
+                        android:layout_toRightOf="@id/inputQuantityTextView"
+                        android:text="@string/plus_sign"
+                        android:textSize="14sp"
+                        android:onClick="incrementQuantity"/>
+
+                    <Button
+                        android:id="@+id/decrement_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_toEndOf="@id/increment_button"
+                        android:layout_toRightOf="@id/increment_button"
+                        android:text="@string/minus_sign"
+                        android:textSize="14sp"
+                        android:onClick="decrementQuantity"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/orderButton"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/order"
+                        android:textSize="12sp"
+                        android:onClick="orderSubmit"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/orderSummaryTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_summary_label"
+                    android:layout_centerInParent="true"
+                    android:paddingTop="20dp"/>
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+                    <TextView
+                        android:text="@string/name_Label"
+                        android:padding="3dp"
+                        android:id= "@+id/nameLabelTextView"/>
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        android:text="@string/name_value"
+                        android:gravity="left"
+                        android:padding="3dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id= "@+id/choiceLabelTextView"
+                        android:text="@string/choice_Label"
+                        android:padding="3dp" />
+                    <TextView
+                        android:text="@string/choice_value"
+                        android:id = "@+id/choiceTextView"
+                        android:singleLine="false"
+                        android:gravity="left"
+                        android:padding="3dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id= "@+id/quantityLabelTextView"
+                        android:text="@string/quantity"
+                        android:padding="3dp" />
+                    <TextView
+                        android:text="@string/quantity_value"
+                        android:id = "@+id/quantityTextView"
+                        android:singleLine="false"
+                        android:gravity="left"
+                        android:padding="3dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/totalLabelTextView"
+                        android:text="@string/total_Label"
+                        android:padding="3dp" />
+                    <TextView
+                        android:id="@+id/totalTextView"
+                        android:text="@string/total_value"
+                        android:singleLine="false"
+                        android:gravity="left"
+                        android:padding="3dp" />
+                </TableRow>
+
+            </TableLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/sendInvoiceButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/send_invoice"
+                    android:textSize="12sp"
+                    android:onClick="sendInvoice"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
