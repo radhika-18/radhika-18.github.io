@@ -12,46 +12,72 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!--Contact image-->
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
+            android:layout_height="250dp"
             android:src="@mipmap/mainimage"
-            android:scaleType="fitXY"/>
+            android:scaleType="centerCrop"/>
 
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!--Contact Details-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/header"
-            android:textSize="50sp"></TextView>
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addrline1"
-            android:textSize="25sp"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addrline1"
+                    android:textSize="25sp"
+                    android:textColor="@color/textColor"></TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="map"
-            android:text="@string/addrline2"
-            android:textSize="25sp"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addrline2"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="25sp"
+                    android:textColor="@color/textColor"></TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="phone"
-            android:text="@string/phone"
-            android:textSize="25sp"></TextView>
+                <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="email"
-            android:text="@string/email"
-            android:textSize="25sp"></TextView>
+                       <ImageView
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:layout_alignParentLeft="true"
+                           android:layout_alignParentStart="true"
+                           android:layout_centerVertical="true"
+                           android:layout_marginRight="30dp"
+                           android:src="@mipmap/call_icon"
+                           android:scaleType="centerCrop"></ImageView>
+
+                        <TextView
+                            android:theme="@style/TextViewTheme"
+                            android:id="@+id/phoneText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_centerVertical="true"
+                            android:autoLink="phone"
+                            android:text="@string/phone"></TextView>
+                </RelativeLayout>
+
+            <TextView
+                android:theme="@style/TextViewTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:text="@string/email"
+                android:layout_marginBottom="20dp"></TextView>
+
+
+        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

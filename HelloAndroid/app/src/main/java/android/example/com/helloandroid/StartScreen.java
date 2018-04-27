@@ -11,7 +11,7 @@ import android.content.Intent;
 
 public class StartScreen extends Activity{
 
-    private static int SPLASH_TIME_OUT = 1500;
+    private static int SPLASH_TIME_OUT = 400;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
