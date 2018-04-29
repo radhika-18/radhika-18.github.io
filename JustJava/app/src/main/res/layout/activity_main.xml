@@ -121,14 +121,24 @@
                         android:textSize="14sp"
                         android:onClick="incrementQuantity"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/quantityViewTextView"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/increment_button"
+                        android:layout_toRightOf="@id/increment_button"
+                        android:layout_centerVertical="true"                      />
                     <Button
                         android:id="@+id/decrement_button"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_toEndOf="@id/increment_button"
-                        android:layout_toRightOf="@id/increment_button"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/quantityViewTextView"
+                        android:layout_toRightOf="@id/quantityViewTextView"
                         android:text="@string/minus_sign"
                         android:textSize="14sp"
                         android:onClick="decrementQuantity"/>
